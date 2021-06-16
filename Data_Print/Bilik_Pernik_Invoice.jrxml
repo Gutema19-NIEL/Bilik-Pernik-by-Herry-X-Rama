@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="69baf905-72b4-4006-9ebc-ff950e9827f5">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="345"/>
+	<parameter name="code_user" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[call invoice($P{code_user})]]>
+	</queryString>
+	<field name="id_transaksi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_seller" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mitra_bayar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mitra_kirim" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="banyak_beli" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_produk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="175" splitType="Stretch">
+			<image>
+				<reportElement uuid="9fac93fb-eaaa-42e0-8dcb-e3eac5a56acc" x="26" y="23" width="112" height="45"/>
+				<imageExpression><![CDATA["D:\\UNUD2020\\KULIAH SEMESTER II\\PEMROGRAMAN BERORIENTASI OBJEK (E)\\Bilik-Pernik-by-Herry-X-Rama\\Bilik-Pernik-by-Herry-X-Rama\\Bilik Pernik\\src\\Picture\\Print\\Logo.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="73835568-fcb1-4312-8080-37137eeadd92" x="393" y="0" width="162" height="175"/>
+				<imageExpression><![CDATA["D:\\UNUD2020\\KULIAH SEMESTER II\\PEMROGRAMAN BERORIENTASI OBJEK (E)\\Bilik-Pernik-by-Herry-X-Rama\\Bilik-Pernik-by-Herry-X-Rama\\Bilik Pernik\\src\\Picture\\Print\\B.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="9675d38c-f1b5-4ac2-aede-7e545ad1bda9" x="26" y="68" width="331" height="94"/>
+				<imageExpression><![CDATA["D:\\UNUD2020\\KULIAH SEMESTER II\\PEMROGRAMAN BERORIENTASI OBJEK (E)\\Bilik-Pernik-by-Herry-X-Rama\\Bilik-Pernik-by-Herry-X-Rama\\Bilik Pernik\\src\\Picture\\Print\\invoice.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="77c3da9e-bdde-459a-96bd-0c909bad6d9c" x="26" y="26" width="80" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Transaksi : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="88214dd2-bb05-42d3-9e0d-dce784bc6ecd" x="123" y="27" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_transaksi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6922499e-e501-402c-9079-ff80174bd1f6" x="93" y="27" width="38" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<text><![CDATA[BP -]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="82" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="b411993c-4031-4f3c-9fe1-85a6d3b37655" x="26" y="0" width="508" height="82" forecolor="#DC8B1B" backcolor="#DC8B1B"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="fd9f8a75-f8e6-40df-aaa2-b0e83a92220f" x="44" y="20" width="83" height="20" forecolor="#FDFDFC"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<text><![CDATA[Nama Pembeli 	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="6bcbc5f8-b444-48a8-81d3-da5a0efd3536" x="139" y="20" width="129" height="20" forecolor="#FDFDFC"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="755f2dfb-eed4-44f7-8aad-68304e778e59" x="44" y="40" width="83" height="20" forecolor="#FDFDFC"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<text><![CDATA[Nama Toko	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="50bc22ce-bf99-4f2f-9d5d-4ac0cac9c8eb" x="138" y="40" width="129" height="20" forecolor="#FDFDFC"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_seller}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0240da47-7a1c-4456-a63b-ff8128911ec3" x="381" y="27" width="50" height="20" forecolor="#FDFDFC"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<text><![CDATA[Tanggal	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="80bf92b4-cd75-4c56-bd0e-7c649b6f56df" x="430" y="27" width="104" height="20" forecolor="#FDFDFC"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="271" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="14b216f8-703c-4b4c-a67d-04e9874b37da" x="26" y="1" width="508" height="82" forecolor="#FBF7EA" backcolor="#FBF7EA"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="62a566dc-9459-443d-8bfc-afa24d2b2479" x="26" y="157" width="508" height="35" forecolor="#FBF7EA" backcolor="#FBF7EA"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="b4b64c6a-75e3-4183-9ba7-258b0f567c6c" x="44" y="42" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mitra_bayar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="51311b1f-47bc-41fc-905e-2d0297da200c" x="44" y="22" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mitra Pembayaran :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="576f41a5-6a5e-4c05-8298-43111d22a2a1" x="168" y="42" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mitra_kirim}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="47ae22a4-e553-4f3d-aecb-cba9bc12d75b" x="168" y="22" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jasa Pengiriman :]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c7f74962-d710-48e1-a90b-e1d582f19e8b" x="228" y="162" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{banyak_beli}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8f80a9ba-9e28-4db0-a413-7c990c47ff0a" x="229" y="129" width="39" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<text><![CDATA[Kuantitas	]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0c1274a3-2b46-47ff-bf6d-e1621ab8a6e1" x="44" y="162" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_produk}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="1e375023-c7ed-45e8-8cd7-e81047d2fc03" x="369" y="207" width="165" height="64" forecolor="#303996" backcolor="#303996"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="3bdb429f-8d8a-40ce-890d-58279ff8e48e" x="44" y="129" width="62" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama Produk	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="75a4f8cd-bee6-4a26-ba4d-d52eab70b31f" x="27" y="92" width="100" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rincian Pesanan]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="91385a12-8872-4c40-93f0-35cdc1b8e13e" x="400" y="240" width="100" height="20" forecolor="#FCFCFD"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="292477be-9dfc-492e-8103-99d23c958b6d" x="381" y="220" width="100" height="20" forecolor="#FCFCFD"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="6196d074-48f0-4112-8c7b-7e81bf09546e" x="419" y="162" width="100" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c3ac1170-41ad-4064-ac01-abf29a3a05dc" x="400" y="129" width="119" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<text><![CDATA[Subtotal	]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="a9785fec-1c23-49ef-ab84-7adc1703a3f6" x="499" y="0" width="35" height="83" forecolor="#303996" backcolor="#303996"/>
+			</rectangle>
+			<line>
+				<reportElement uuid="5b450da1-1d4e-4846-ab62-0438a6a9d3d9" x="26" y="121" width="508" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="e8c4a6e6-b5ef-4402-821b-85e3f562d278" x="26" y="156" width="508" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="a3554389-6edb-4919-8218-41537bbdeabf" x="400" y="162" width="20" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="df7b7e17-58de-4dac-924f-abd0b23119cd" x="381" y="240" width="20" height="20" forecolor="#FDFDFC"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif"/>
+				</textElement>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="194" splitType="Stretch">
+			<image>
+				<reportElement uuid="d9693039-24c1-403d-8ec0-fb56a490f8db" x="0" y="20" width="164" height="174"/>
+				<imageExpression><![CDATA["D:\\UNUD2020\\KULIAH SEMESTER II\\PEMROGRAMAN BERORIENTASI OBJEK (E)\\Bilik-Pernik-by-Herry-X-Rama\\Bilik-Pernik-by-Herry-X-Rama\\Bilik Pernik\\src\\Picture\\Print\\A.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="67f931d4-4700-4837-9020-cbe27c66255d" x="499" y="70" width="56" height="124"/>
+				<imageExpression><![CDATA["D:\\UNUD2020\\KULIAH SEMESTER II\\PEMROGRAMAN BERORIENTASI OBJEK (E)\\Bilik-Pernik-by-Herry-X-Rama\\Bilik-Pernik-by-Herry-X-Rama\\Bilik Pernik\\src\\Picture\\Print\\C.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
